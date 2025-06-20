@@ -136,7 +136,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_23_031839) do
   create_table "article_embeddings", force: :cascade do |t|
     t.bigint "article_id", null: false
     t.text "term", null: false
-    t.vector "embedding", limit: 1536
+    # t.vector "embedding", limit: 1536
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["embedding"], name: "index_article_embeddings_on_embedding", using: :ivfflat
